@@ -1,12 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-    <h2 class="text-xl font-semibold mb-4">Bienvenido a SWAPI</h2>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-3xl font-semibold mb-6 text-center">Bienvenido a SWAPI</h2>
 
-    <a
-        href="{{ route('swapi.index') }}"
-        class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-    >
-        Entrar
-    </a>
+        @auth
+            <div class="mb-6 p-4 bg-green-100 border-l-4 border-green-500 text-green-700 rounded">
+                <p>¡Hola, {{ Auth::user()->name }}! Has iniciado sesión correctamente.</p>
+            </div>
+        @endauth
+
+        <div class="text-center">
+            <a href="{{ route('swapi.index') }}" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                Entrar
+            </a>
+        </div>
+    </div>
 @endsection
