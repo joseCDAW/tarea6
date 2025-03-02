@@ -26,7 +26,6 @@
                     <p class="text-gray-700"><strong>Color de Cabello:</strong> {{ $character['hair_color'] }}</p>
                     <p class="text-gray-700"><strong>Color de Ojos:</strong> {{ $character['eye_color'] }}</p>
                     <p class="text-gray-700"><strong>Género:</strong> {{ $character['gender'] }}</p>
-
                     {{-- Vehículos (si existen) --}}
                     @if (!empty($character['vehicles_data']))
                         <h4 class="text-lg font-semibold mt-3 mb-1">Vehículos</h4>
