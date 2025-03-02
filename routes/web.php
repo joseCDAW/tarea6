@@ -14,3 +14,5 @@ Route::get('/debug-example', function () {
 
     return $uppercaseMessage;
 });
+Route::get('/swapi', [App\Http\Controllers\SwapiController::class, 'index'])->name('swapi.index');
+Route::post('/swapi/detalles', [App\Http\Controllers\SwapiController::class, 'showFilmDetails'])->name('swapi.details');
