@@ -20,6 +20,7 @@
                 <div class="bg-white rounded shadow p-4">
                     <h3 class="text-xl font-bold mb-2">{{ $character['name'] }}</h3>
 
+
                     {{-- Ejemplo de detalles adicionales (opcional) --}}
                     <p class="text-gray-700"><strong>Altura:</strong> {{ $character['height'] }}</p>
                     <p class="text-gray-700"><strong>Masa:</strong> {{ $character['mass'] }}</p>
